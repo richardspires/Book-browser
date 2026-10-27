@@ -9,17 +9,27 @@
 </head>
 <body>
     <header>         
-        <h1></h1>         
-        <p></p>     
+        <h1>Book Browser</h1>         
+        <p>Search the shelf, filter by genre, and click any book for details.</p>     
     </header>     
         
         
    <main>          
-    <section class="controls"></section>     
+    <section class="controls">
+        <input type="text" class="search-input js-searchInput" placeholder="Search by title..."> /*--search box--*/
+
+        <section class="js-ratingSelect">
+            <option value="" class="value"></option>
+            <option value="" class="value"></option>
+            <option value="" class="value"></option>
+        </section> /*--rating filter--*/
+    </section>   
+    
+    
    </main>
 
    <footer>
-    <p></p>
+    <p>&copy; Richard Spires Project: book browser</p>
    </footer>
 
    <script src="./js/app.js"></script>
