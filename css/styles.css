@@ -1,0 +1,93 @@
+:root{
+    --background: #cec4b6;
+    --white: #ffffff;
+    --text: #000000;
+    --grey: #747474;
+    --border: #ddd6c8;
+    --accent: #8a3b2e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 24px 20px;
+}
+
+header h1 {
+    margin: 0 0 6px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    color: var(--grey);
+}
+
+.conttrols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, button { /*---all in one for cleaner code--*/
+    display: flex;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 220px;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+.genre-buttons {
+    width: 100%;  /*---get own row--*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.genre-active {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
