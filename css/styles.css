@@ -91,3 +91,27 @@ button {
     padding: 10px;
     cursor: pointer;
 }
+
+.book-card:hover {
+    transform: translateY(-4px);
+}
+
+.book-card-selected {
+    border: 2px solid var(--accent);
+}
+
+.book-card img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.book-card h3 {
+    margin: 10px 0 4px 0;
+    font-size: 1rem;
+}
+
+.book-card p{
+    margin: 0 0 6px 0;
+    color: var(--grey);
+    font-size: 0.9rem;
+}
