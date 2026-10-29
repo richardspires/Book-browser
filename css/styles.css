@@ -142,3 +142,30 @@ button {
     border-radius: 8px;
 }
 
+.details-text {
+    flex: 1;
+    min-width: 220px;
+}
+
+.details-text h2 {
+    margin-top: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.check-out {
+    color: darkred;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+    color: var(--grey);
+}
