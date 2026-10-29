@@ -115,3 +115,30 @@ button {
     color: var(--grey);
     font-size: 0.9rem;
 }
+
+.genre-tag {
+    background-color: var(--background);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+}
+
+.book-details {
+    margin-top: 40px;
+    padding: 20px;
+    background-color:  var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.details-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.details-layout img {
+    width: 200;
+    border-radius: 8px;
+}
+
