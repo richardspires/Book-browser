@@ -6,39 +6,31 @@ const book = [
     },
     {id:2, Title:"Frankenstein", author:"Mary Shelly", genre:"Science Finction", year:1818, rating:4.8, available:true, color:"#2d5aa0", description:"A young sceitist, Victor Frankenstein, builds a living creature from stolen parts and then abandons it. The story asks what creators owe to what they created."
     },
-   {id:3, Title:"Dracula", author:"Bram Stoker", genre:"Horror", year:1897,
-        rating:4.5, available:false, color:"#5a2a6e", description:"Told through letters, dairies, and newspaper clippings, a group of freinds hunts a Transylvanian count who has come to England to spread his curse"
+   {id:3, Title:"Dracula", author:"Bram Stoker", genre:"Horror", year:1897, rating:4.5, available:false, color:"#5a2a6e", description:"Told through letters, dairies, and newspaper clippings, a group of freinds hunts a Transylvanian count who has come to England to spread his curse"
     },
-    {id:4, Title:"1984", author:"George Orwell", genre:"Science Finction", year:1949,
-        rating:4, available:true, color:"#7a2a2a", description:"Winston Smith lives under constant surveillince in a totalitarian state and quietly beings to question the party, with consequeces he cannot escape"
+    {id:4, Title:"1984", author:"George Orwell", genre:"Science Finction", year:1949, rating:4, available:true, color:"#7a2a2a", description:"Winston Smith lives under constant surveillince in a totalitarian state and quietly beings to question the party, with consequeces he cannot escape"
     },
-    {id:5, Title:"And Then There Were None", author:"Agatha Christie", genre:"Mystery", year:1939,
-        rating:4.5, available:true, color:"#38505a", description:"Ten strangers are invited to an island and accused of past crime. One by one are removed, and the surviors realize the killer is amoung them."
+    {id:5, Title:"And Then There Were None", author:"Agatha Christie", genre:"Mystery", year:1939, rating:4.5, available:true, color:"#38505a", description:"Ten strangers are invited to an island and accused of past crime. One by one are removed, and the surviors realize the killer is amoung them."
     },
-    {id:6, Title:"Sherlock Homes", author:"Arthur Conan Doyle", genre:"Mystery", year:1892,
-        rating:4.2, available:false, color:"#6b5a2e", description:"Twelve short case that introduced the sharpest detective on baker street and his loyal frien Dr. Watson"
+    {id:6, Title:"Sherlock Homes", author:"Arthur Conan Doyle", genre:"Mystery", year:1892,  rating:4.2, available:false, color:"#6b5a2e", description:"Twelve short case that introduced the sharpest detective on baker street and his loyal frien Dr. Watson"
     },
-    {id:7, Title:"Jane Erye", author:"charlotte", genre:"Romance", year:1847,
-        rating:3.8, available:true, color:"#9b3d5a", description:"An orphaned governess falls for her brooding employer, Mr. Rochester, and uncovers the secret hidden in huose."
+    {id:7, Title:"Jane Erye", author:"charlotte", genre:"Romance", year:1847,   rating:3.8, available:true, color:"#9b3d5a", description:"An orphaned governess falls for her brooding employer, Mr. Rochester, and uncovers the secret hidden in huose."
     },
-    {id:8, Title:"Treasure Island", author:"Robert Louis Stevenson", genre:"Adventure", year:1883,
-        rating:4.2, available:false, color:"#b6622a", description:"Young Jim Hawkins joins a voyage to find buried pirate treasure and must otwit the charming and dangerous Long JOhn Sliver"
+    {id:8, Title:"Treasure Island", author:"Robert Louis Stevenson", genre:"Adventure", year:1883,  rating:4.2, available:false, color:"#b6622a", description:"Young Jim Hawkins joins a voyage to find buried pirate treasure and must otwit the charming and dangerous Long JOhn Sliver"
     },
-    {id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    },{id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    },{id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    },{id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    },{id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    },{id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    },{id:, Title:"", author:"", genre:"", year:,
-        rating:, available:true, color:"#", description:""
-    }
+    {id:9, Title:"The Lord of the Rings", author:"J. R. R. Tolkien", genre:"Fanasty", year:1954, rating:5.0, available:true, color:"#1f5f55", description:"Frodo inherits a ringd of terrabile power and set out to witha fellowship to destory it in the fires of mount dooom"
+    },
+    {id:10, Title:"Ready Player One", author:"Ernest cline", genre:"Science Fiction", year:1954, rating:4.7, available:true, color:"#4a2f8a", description:"In 2045, teenager Wade wattshunts for a hidden Easter egg inside a vast virtual world to inherit its creator's fortune"
+    },
+    {id:11, Title:"Alice in wonder land", author:"Lewis Carrolls", genre:"Fanasty", year:1865, rating:4.1, available:true, color:"#2a7a8a", description:"Alice chasing a waistcoated White Rabbit into a rabbit hole, plunging her into a dream realm where potions and cakes alter her size, a grinning cat vanishes mid-sentence, and a croquet match with flamingos spirals under the Queen’s furious gaze."
+    },
+    {id:12, Title:"The Notebook", author:"Nicholas Sparks", genre:"Romance", year:1996,
+        rating:2.5, available:true, color:"#a8506a", description:"an elderly man reading a love story to a nursing home resident, revealing a romance between a spirited young woman from wealth and a modest laborer. Set in 1940s South Carolina, their bond defies class barriers and survives separation, ambition, and time."
+    },
+    {id:13, Title:"Bleach", author:"Tite Kubo", genre:"Manga", year:2001, rating:5.0, available:true, color:"#d9822b", description:""},
+    {id:14, Title:"One pieces", author:"", genre:"Manga", year:1997, rating:5.0, available:true, color:"#", description:""
+    },
+    {id:15, Title:"Vinlad Saga", author:"", genre:"Manga", year:2005, rating:4.5, available:true, color:"#", description:""}
 ];
 
 //users varables
