@@ -106,3 +106,21 @@ function getFilteredBooks() {
 
     return matchingBooks
 }
+
+/*rendering */
+
+function renderGenreButtons() {
+    const genre = ["ALL"] // collect each genre once
+    for (let i = 0; i < books.length; i++) {
+        if (!genre.includes(books[i].genre)) {
+            genre.push(books[i].genre)
+        }
+    }
+
+    genreButtons.innerHTML = ""; // clear old
+    for (let i = 0; i < genres.length; i++) {
+        const genre = genres[i];
+        const button = document.createElement("button");
+        button.textContent = genre;
+    }
+}
