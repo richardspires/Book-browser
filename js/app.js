@@ -84,3 +84,25 @@ function makeCover(book) {
     /* svg into a link img tag can be use */
     return "data:image?svg+xml;charset=utf-8," + encodeURIComponent(svg)
 }
+
+/*search and fliter logic */
+function getFilteredBooks() {
+    const matchingBooks = [];  //empty list
+    const search = searchText.toLocaleLowerCase();    // lowercase so HOBBIT = hobbit
+
+    for (i = 0; i < book.length; i++) {
+        const book = books[i];
+
+        const titleMatches = book.title.toLocaleLowerCase().includes(search); //title cotain what type of user
+
+        const genreMatches = selectGenre === "All" || book.genre === selectGenre; //genre all or does it match
+
+        const ratingMatches = book.rating >= minRating; //high enough rating
+
+        if (titleMatches && genreMatches && ratingMatches) {
+            matchingBooks.push(book);
+        }
+    }
+
+    return matchingBooks
+}
