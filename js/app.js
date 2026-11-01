@@ -138,3 +138,84 @@ function renderGenreButtons() {
       genreButtons.appendChild(button);
     }  
 }
+
+/*show a card that pass the sreach */
+function renderBooks() {
+    const visibleBooks = getFilteredBooks();
+    resultsText.textContent = "Showing" + visibleBooks.length + " of " + books.length + " books";
+
+    if (visibleBooks.length === 0) {
+        bookList.innerHTML = "<p>No books match your search. Try clearing the filters.</p>";
+        return;
+    }
+
+    let cardsHtml = ""; // html for cards
+    for (let i = 0; i < visibleBooks.length; i++) {
+        const book = visibleBooks[i]
+
+        let cardClass = "book-card";
+        if (book.id === selectedBookId) {
+            cardClass = "book-card book-card-selected"
+        }
+
+        cardsHtml += `
+        <div class="${cardClass}" data-id="${book.id}">
+         <img src=${makeCover(book)}" alt="Cover of ${book.title}">
+         <h3>${book.title}</h3>
+         <p>${book.author}</p>
+         <span class="genre-tag">${book.genre}</span>
+        </div>`;
+    }
+    bookList.innerHTML = cardsHtml;
+
+    /* make cards clickable */
+    const cards = document.querySelector(".book-card")
+    for (let i = 0; i <cards.length; i++) {
+        cards[i].addEventListener("click", function () {
+            const clickedId = Number(this.dataset.id); //read as number
+            showBookDetails(clickedId)
+        })
+    }
+}
+
+/*show full deatil*/
+function showBookDetails(bookId) {
+    selectedBookId = bookId;
+
+    let book = null;   //find the book
+    for (let i = 0; i < books.length; i++) {
+        if (book[i].id === bookId) {
+            book = books[i];
+        }
+    }
+
+    let availabilityText = "Checked out";
+    let availabilityClass = "checked-out";
+    if (book.avaibility) {
+        availabilityText = "Available"
+        availabilityClass = "Available"
+    }
+    
+    bookDetails.innerHTML = `
+    <div class="details-layout">
+     <img src=${makeCover(book)}" alt="Cover of ${book.title}">
+     <div class="details.text">
+      <h2>${book.title}</h2>
+      <p><strong>Author:</strong> ${book.author}</p>
+      <p><strong>Genre:</strong> ${book.genre}</p>
+      <p><strong>Year:</strong> ${book.rating}</p>
+      <p><strong>Status:</strong> <span class="${availabilityClass}</span>${availabilityText}</p>
+      <p>${book.descritption}</p>
+     </div>
+    </div>`;
+
+    renderBooks();
+    bookDetails.scrollIntoView({ behavior: "smooth" })
+}
+
+/*what is showen before clicked */
+function showEmptyDetails() {
+    bookDetails.innerHTML = "<p>Click a book above to see its details here.</p>";
+}
+
+/* eventlinstiners */
