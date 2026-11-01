@@ -219,3 +219,29 @@ function showEmptyDetails() {
 }
 
 /* eventlinstiners */
+searchInput.addEventListener("Input", function() {
+    searchText = searchInput.value;
+    renderBooks();
+})
+
+ratingSelect.addEventListener("change", function () {
+    minRating = Number(ratingSelect.value);
+    renderBooks();
+})
+
+clearButton.addEventListener("click", function() {
+    searchText = "";
+    selectGenre= "All";
+    minRating = 0;
+
+    searchInput.value = ""; // empty sreach bar
+    ratingSelect.value = "0";
+
+    renderGenreButtons();
+    renderBooks();
+})
+
+/* when start */
+renderGenreButtons();
+renderBooks();
+showBookDetails();
