@@ -1,5 +1,5 @@
 :root{
-    --background: #cec4b6;
+    --background: #a12fa9;
     --white: #ffffff;
     --text: #000000;
     --grey: #747474;
@@ -19,7 +19,7 @@ body{
 }
 
 main {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto; 
     padding: 20px;
 }
@@ -42,7 +42,7 @@ header p {
     color: var(--grey);
 }
 
-.conttrols {
+.controls {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -50,7 +50,7 @@ header p {
 }
 
 input, select, button { /*---all in one for cleaner code--*/
-    display: flex;
+    font-size: 1rem;
     padding: 10px;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -138,7 +138,7 @@ button {
 }
 
 .details-layout img {
-    width: 200;
+    width: 200px;
     border-radius: 8px;
 }
 
@@ -157,7 +157,7 @@ button {
     font-weight: bold;
 }
 
-.check-out {
+.checked-out {
     color: darkred;
     font-weight: bold;
 }

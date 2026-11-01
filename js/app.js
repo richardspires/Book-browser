@@ -142,7 +142,7 @@ function renderGenreButtons() {
 /*show a card that pass the sreach */
 function renderBooks() {
     const visibleBooks = getFilteredBooks();
-    resultsText.textContent = "Showing" + visibleBooks.length + " of " + books.length + " books";
+    resultsText.textContent = "Showing " + visibleBooks.length + " of " + books.length + " books";
 
     if (visibleBooks.length === 0) {
         bookList.innerHTML = "<p>No books match your search. Try clearing the filters.</p>";
@@ -160,7 +160,7 @@ function renderBooks() {
 
         cardsHtml += `
         <div class="${cardClass}" data-id="${book.id}">
-         <img src=${makeCover(book)}" alt="Cover of ${book.title}">
+         <img src="${makeCover(book)}" alt="Cover of ${book.title}">
          <h3>${book.title}</h3>
          <p>${book.author}</p>
          <span class="genre-tag">${book.genre}</span>
@@ -169,7 +169,7 @@ function renderBooks() {
     bookList.innerHTML = cardsHtml;
 
     /* make cards clickable */
-    const cards = document.querySelector(".book-card")
+    const cards = document.querySelectorAll(".book-card")
     for (let i = 0; i <cards.length; i++) {
         cards[i].addEventListener("click", function () {
             const clickedId = Number(this.dataset.id); //read as number
@@ -184,28 +184,28 @@ function showBookDetails(bookId) {
 
     let book = null;   //find the book
     for (let i = 0; i < books.length; i++) {
-        if (book[i].id === bookId) {
+        if (books[i].id === bookId) {
             book = books[i];
         }
     }
 
     let availabilityText = "Checked out";
     let availabilityClass = "checked-out";
-    if (book.avaibility) {
+    if (book.available) {
         availabilityText = "Available"
-        availabilityClass = "Available"
+        availabilityClass = "available"
     }
     
     bookDetails.innerHTML = `
     <div class="details-layout">
-     <img src=${makeCover(book)}" alt="Cover of ${book.title}">
-     <div class="details.text">
+     <img src="${makeCover(book)}" alt="Cover of ${book.title}">
+     <div class="details-text">
       <h2>${book.title}</h2>
       <p><strong>Author:</strong> ${book.author}</p>
       <p><strong>Genre:</strong> ${book.genre}</p>
-      <p><strong>Year:</strong> ${book.rating}</p>
-      <p><strong>Status:</strong> <span class="${availabilityClass}</span>${availabilityText}</p>
-      <p>${book.descritption}</p>
+      <p><strong>Year:</strong> ${book.year}</p>
+      <p><strong>Status:</strong> <span class="${availabilityClass}">${availabilityText}</span></p>
+      <p>${book.description}</p>
      </div>
     </div>`;
 
@@ -219,7 +219,7 @@ function showEmptyDetails() {
 }
 
 /* eventlinstiners */
-searchInput.addEventListener("Input", function() {
+searchInput.addEventListener("input", function() {
     searchText = searchInput.value;
     renderBooks();
 })
@@ -244,4 +244,4 @@ clearButton.addEventListener("click", function() {
 /* when start */
 renderGenreButtons();
 renderBooks();
-showBookDetails();
+showEmptyDetails();
